@@ -166,17 +166,17 @@ Types and examples of metadata include sample-associated metadata (sampling time
 
 **Objective:** Investigate the effect of a new injected drug on gene expression in mice
 
-####Design
+#### Design
 **Treatment Group:** Mice injected with the drug  
 **Mock Treatment Control:** Mice injected with PBS  
 **Negative Control:** Healthy mice not injected with either   
 
-####Challenges	
+#### Challenges	
 **Known Batch Effect:** Experiment needs two days of RNA extraction and multiple sequencing runs
 
 **Confounding Factor:** Age of the mice
 
-####Good Experimental Design:
+#### Good Experimental Design:
 
 * [Randomisation](#random): Randomly assign mice to each group at the start of the experiment to minimise selection bias
 * [Replication](#rep_number): Include five biological replicates for each group 
@@ -184,7 +184,7 @@ Types and examples of metadata include sample-associated metadata (sampling time
 * Blinding: Animal facility staff are blinded to the group assignments to reduce chances of [biased](#bias) treatment
 * Control for [Confounding Factors](#confounder): Use age- and sex-matched mice for all groups to control for variability
 
-####Issues to avoid (bad design):
+#### Issues to avoid (bad design):
 
 * Lack of Randomisation: Selecting stronger mice for the treatment group
 * No Replication: Use only two mice per group, making the results unreliable and statistically invalid for analysis
