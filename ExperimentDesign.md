@@ -200,7 +200,7 @@ Types and examples of metadata include sample-associated metadata (sampling time
 **Standard Care Group**: Patients with lung cancer who receive the current standard of care
 **Control Group:** Healthy individuals
 
-###Challenges:
+### Challenges:
 **Smoking as a Confounding Factor:**  
 Issue: Smokers are more prevalent in lung cancer patients than in the general population. If the control group has fewer smokers than the intervention groups, it could skew the results. Cancer is more likely to develop later in life.   
 Solution: Ensure all groups have a similar proportion of smokers to control for this variable and have the same age range.
