@@ -3,6 +3,15 @@
 ### Do your research before you do your research
 
 
+Testing images again
+
+
+![mouse_fRZ60gP](https://github.com/user-attachments/assets/ab54f63b-c4e5-438c-9fcb-4f6cac73c545)
+
+![mouse_at_different_ages](https://github.com/user-attachments/assets/dbc12ece-be32-44ee-bab5-4ea7f2a25556)
+
+
+
 ## Where to start
 
 In experiment design, the first step is to define your [hypothesis](#hypothesis) or biological question before you identify the methods used to answer your question. 
