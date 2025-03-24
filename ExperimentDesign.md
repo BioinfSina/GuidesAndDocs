@@ -3,9 +3,6 @@
 ### Do your research before you do your research
 
 
-![eppendorf_closed](https://github.com/user-attachments/assets/1e0194a6-3a8f-4bb9-8a99-b8ea840c8543)
-
-
 ## Where to start
 
 In experiment design, the first step is to define your [hypothesis](#hypothesis) or biological question before you identify the methods used to answer your question. 
