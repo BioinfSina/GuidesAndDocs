@@ -44,11 +44,13 @@ Replicates are crucial for ensuring the reliability and reproducibility of resul
 ## Different types of replicates
 
 We usually have two different types of replicates, technical and [biological replicates](#rep_biol).
+
+![replicate_types](https://github.com/BioinfSina/GuidesAndDocs/blob/main/Pictures/replicate_types.svg)
+
+
 Technical replicates are achieved by either sampling the exact same origin multiple times or by sampling once and splitting into multiple (sub)samples. Those samples will then be separately processed through the same pipeline. This is done to ensure reproducible results and a consistent process. If you plan to include them based on worries about inconsistencies in the process it might be beneficial to do a pilot study to make sure the potential variability and any necessary additional training, equipment maintenance or adaptation of the main experiment has been identified. 
 It is tempting to exclude technical replicates - which can be done for well-tested protocols - but it is better to adapt analysis or repeat an experiment if the technical replicates showed issues, than to unknowingly publish irreproducible (and potentially wrong) results.
 [Biological replicates](#rep_biol) are samples taken from multiple closely related sources that underwent the same treatment in the experiment. In an animal experiment that would mean sampling from multiple animals in the same treatment group. This ensures accounting for individual variation. Biological replicates need to be chosen so the variation between replicates does not overpower the variation you wish to measure.
-
-![replicate_types](https://github.com/BioinfSina/GuidesAndDocs/blob/main/Pictures/replicate_types.svg)
 
 <a id="rep_biol"></a>
 ## What are good biological replicates?
