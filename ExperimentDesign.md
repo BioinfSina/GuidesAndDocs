@@ -125,6 +125,7 @@ If possible you would restrict your treatment group to only subjects with the sa
 Randomisation is a way to reduce the impact of a known confounding factor. Individuals are randomly assigned to the treatment and control groups - which should lead to the confounding factors affecting both groups in the same way.
 
 <a id="block"></a>
+![blocking](https://github.com/BioinfSina/GuidesAndDocs/blob/main/Pictures/blocking.svg)
 A more direct method is blocking, where you allocate the same number of individuals affected by the same value of the confounding factor into all control and treatment groups, for example having age-matched controls or comparable numbers of male and female subjects to account for sex differences.
 Blocking and randomisation control confounding variables, restriction avoids them and collecting abundant [metadata](#metadata) helps deal with them during analysis - especially for factors that were unknown during experiment design.
 
