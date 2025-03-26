@@ -2,9 +2,30 @@
 ### ~ What does your bioinformatician want you to know? ~
 ### Do your research before you do your research
 
+## Table of contents
+1. [Where to start](#start)
+2. [Having a well-defined research question is important paragraph](#hypothesis)
+3. [Ethical considerations](#ethics)
+4. [How many replicates do you need?](#rep_number)
+5. [Different types of replicates](#rep_type)
+6. [What are good biological replicates?](#rep_biol)
+7. [Different types of controls](#control_type)
+8. [What is the best sequencing depth for my experiment?](#seq_depth)
+9. [DNA/RNA concentration needed and how to deal with issues](#concentration)
+10. [Confounding factors and how to deal with them](#confounder)
+11. [How to avoid and deal with batch effects](#batch)
+12. [Do I need to run another set of controls?](#control_pub)
+13. [Quasi-Experimental Design](#quasi)
+14. [Pilot experiments provide insights into how to get the best results](#pilot)
+15. [Human bias](#bias)
+16. [Metadata](#metadata)
+17. [Examples for good vs bad experiment design](#examples)
+18. [Can’t I just use AI to plan my experiment?](#ai)
+19. [Final remarks](#final)
+
 
 ## Where to start
-
+<a id="start"></a>
 In experiment design, the first step is to define your [hypothesis](#hypothesis) or biological question before you identify the methods used to answer your question. 
 With this information, you should already start talking to collaborators and facilities that might be involved in the process, so they help you identify issues and suggest improvements. You might need a pilot experiment to test and practice different processes.
 A successful [pilot experiment](#pilot) helps you make informed decisions on necessary changes as well as deciding the number and types of replicates and controls necessary for the main experiment. 
@@ -126,6 +147,7 @@ Randomisation is a way to reduce the impact of a known confounding factor. Indiv
 
 <a id="block"></a>
 ![blocking](https://github.com/BioinfSina/GuidesAndDocs/blob/main/Pictures/blocking.svg)
+
 A more direct method is blocking, where you allocate the same number of individuals affected by the same value of the confounding factor into all control and treatment groups, for example having age-matched controls or comparable numbers of male and female subjects to account for sex differences.
 Blocking and randomisation control confounding variables, restriction avoids them and collecting abundant [metadata](#metadata) helps deal with them during analysis - especially for factors that were unknown during experiment design.
 
