@@ -26,13 +26,12 @@
 
 ## Where to start
 <a id="start"></a>
-In experiment design, the first step is to define your [hypothesis](#hypothesis) or biological question before you identify the methods used to answer your question. 
-With this information, you should already start talking to collaborators and facilities that might be involved in the process, so they help you identify issues and suggest improvements. You might need a pilot experiment to test and practice different processes.
-A successful [pilot experiment](#pilot) helps you make informed decisions on necessary changes as well as deciding the number and types of replicates and controls necessary for the main experiment. 
-You can identify issues like [batch effects](#batch) and [confounding factors](#confounder) and need to adapt your design or analysis to appropriately deal with them. 
-Once you are conducting your main experiment you will also need to collect abundant [metadata](#metadata) to aid future analysis and reproducibility.
+When designing an experiment, the first step is to define your [hypothesis](#hypothesis) or biological question. You can then identify the methods used to answer your question. These choices then lead to further choices about how the experiment might be designed.
+With a hypothesis in mind, you should already start talking to collaborators and facilities that might be involved in the process, so they can help you make sensible choices about methodology and experimental design. For non-standard experiments you might need a [pilot experiment](#pilot) to test and practice different processes and to design the experiment to best answer your question
+A successful pilot experiment helps you make informed decisions on necessary changes as well as deciding the [number](#rep_number) and [types](#rep_type) of replicates and [controls](#control_type) necessary for the main experiment. You can identify issues like [batch effects](#batch) and [confounding factors](#confounder) and need to adapt your design or analysis to appropriately deal with them. Once you are conducting your main experiment you will also need to collect appropriate [metadata](#metadata) to aid future analysis and reproducibility.
 
-In this guide, we will talk about every step of the way in experiment planning and any questions you might have. It is not a substitute for consulting with us and other facilities to ensure the best results.
+In this guide, we will talk about each step of experiment planning. It is, however, a general guide and each experiment will be different. This is not a substitute for consulting with us and other facilities to ensure the best results.
+
 
 <a id="hypothesis"></a>
 ## Having a well-defined research question is important
@@ -54,6 +53,9 @@ Guidance on these matters is given by the Animal Welfare & Ethical Review Body (
 Statistically significant results can only be achieved with a hard minimum of 3 replicates. Two replicates are not enough to define if them disagreeing on a measurement is based on normal individual differences and standard variability of that measure in the population or if there are issues with the measurement for one of the replicates. With three replicates, two agreeing for a measurement and one disagreeing would indicate that the third one is an outlier. 
 The outlier could then either be excluded - leaving only two samples with no significant mean result possible or kept - strongly affecting a mean or median of the group. 
 Clearly, three replicates are not actually enough. But how many do we need?
+
+![outliers](https://github.com/BioinfSina/GuidesAndDocs/blob/main/Pictures/outliers.svg)
+
 Schurch et al. (2016) [[2]](#2) discuss the necessary number of replicates to achieve good results in bulk RNASeq experiments. They see increases in true positives and decreases in true negatives until up to 40 replicates per group. Using appropriate analysis tools and fold change thresholds, they suggest 12 replicates per group are enough for high-quality results in bulk RNASeq.
 12 replicates sounds like a lot, but we strongly suggest including at least 6 replicates to generate useful results. You need to consider that potentially not all of your replicates will pass sequencing and pre-processing quality control and some could be outliers. 
 Statistical power analysis gives you a mathematically supported number of replicates required to work with the expected variation. While it is a statistically sound tool, it is based on estimates for variation and effect size [[3]](#3), [[4]](#4). It can be difficult to define these estimates appropriately without extensive pilot experiments. Hence, we suggest to go with a number of replicates known to work for technically and biologically similar experiment designs instead of doing a power analysis with questionable input estimates.
@@ -64,14 +66,16 @@ Replicates are crucial for ensuring the reliability and reproducibility of resul
 <a id="rep_type"></a>
 ## Different types of replicates
 
-We usually have two different types of replicates, technical and [biological replicates](#rep_biol).
+We usually have two different types of replicates, technical and biological replicates.
 
 ![replicate_types](https://github.com/BioinfSina/GuidesAndDocs/blob/main/Pictures/replicate_types.svg)
 
+Technical replicates are achieved by either sequencing the exact same sample multiple times or by splitting a sample into multiple (sub)samples. Those samples will then be separately processed through the same pipeline. This is done to ensure reproducible results and a consistent process. If you plan to include them based on worries about inconsistencies in the process it might be beneficial to do a pilot study to make sure the potential variability and any necessary additional training, equipment maintenance or adaptation of the main experiment has been identified.
+It is tempting to exclude technical replicates - which can be done for well-established protocols - but it is better to adapt analysis or repeat an experiment if the technical replicates showed issues, than to unknowingly publish irreproducible (and potentially wrong) results.
+Biological replicates are samples taken from multiple closely related sources that underwent the same treatment in the experiment. In an animal experiment that would mean sampling from multiple animals in the same treatment group. This ensures accounting for individual variation. Biological replicates need to be chosen so the variation between replicates does not overpower the variation you wish to measure. While technical replication is usually not necessary, biological replication is essential.
 
-Technical replicates are achieved by either sampling the exact same origin multiple times or by sampling once and splitting into multiple (sub)samples. Those samples will then be separately processed through the same pipeline. This is done to ensure reproducible results and a consistent process. If you plan to include them based on worries about inconsistencies in the process it might be beneficial to do a pilot study to make sure the potential variability and any necessary additional training, equipment maintenance or adaptation of the main experiment has been identified. 
-It is tempting to exclude technical replicates - which can be done for well-tested protocols - but it is better to adapt analysis or repeat an experiment if the technical replicates showed issues, than to unknowingly publish irreproducible (and potentially wrong) results.
-[Biological replicates](#rep_biol) are samples taken from multiple closely related sources that underwent the same treatment in the experiment. In an animal experiment that would mean sampling from multiple animals in the same treatment group. This ensures accounting for individual variation. Biological replicates need to be chosen so the variation between replicates does not overpower the variation you wish to measure.
+
+
 
 <a id="rep_biol"></a>
 ## What are good biological replicates?
