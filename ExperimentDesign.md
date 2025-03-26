@@ -54,7 +54,9 @@ Statistically significant results can only be achieved with a hard minimum of 3 
 The outlier could then either be excluded - leaving only two samples with no significant mean result possible or kept - strongly affecting a mean or median of the group. 
 Clearly, three replicates are not actually enough. But how many do we need?
 
-![outliers](https://github.com/BioinfSina/GuidesAndDocs/blob/main/Pictures/outliers.svg)
+<p align="center">
+  <img src="https://github.com/BioinfSina/GuidesAndDocs/blob/main/Pictures/outliers.svg">
+</p>
 
 Schurch et al. (2016) [[2]](#2) discuss the necessary number of replicates to achieve good results in bulk RNASeq experiments. They see increases in true positives and decreases in true negatives until up to 40 replicates per group. Using appropriate analysis tools and fold change thresholds, they suggest 12 replicates per group are enough for high-quality results in bulk RNASeq.
 12 replicates sounds like a lot, but we strongly suggest including at least 6 replicates to generate useful results. You need to consider that potentially not all of your replicates will pass sequencing and pre-processing quality control and some could be outliers. 
