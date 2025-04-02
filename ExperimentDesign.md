@@ -37,7 +37,7 @@ In this guide, we will talk about each step of experiment planning. It is, howev
 
 With a vague goal in mind and abundant measurements and observations, you could try and get as much out of a single experiment as humanly possible. But would that really answer any questions properly?
 
-In experiments, we can either follow a [hypothesis-driven design](#hypothesis), sometimes also called the ‘scientific method’, or a more observational, hypothesis-free design.
+In experiments, we can either follow a hypothesis-driven design, sometimes also called the ‘scientific method’, or a more observational, hypothesis-free design.
 Hypothesis-driven design involves a research question, which is testable and allows you to design a well-defined and reproducible experiment to answer this specific question properly.
 For example, if the hypothesis is that stem cells will proliferate more under condition 1 than under condition 2 you would grow them under both conditions and monitor proliferation. If the hypothesis is correct all (or at least a significant number) samples from condition 1 will be more proliferative than any of the samples under condition 2.
 Having a good hypothesis is the optimal situation, but especially in sequencing-based experiments, people often take a more investigative approach, utilising a hypothesis-free design. This approach may seek to observe development, disease or the effect of a treatment over time, in multiple genetic backgrounds or environments, without a clear idea of what is expected The nature of ‘omics experiments means that you can get a good overview of, for instance, how expression of every gene changes and this can be useful for discovering new things about your biological system of interest. 
