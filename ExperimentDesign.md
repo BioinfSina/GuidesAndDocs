@@ -23,6 +23,10 @@
 18. [Can’t I just use AI to plan my experiment?](#ai)
 19. [Final remarks](#final)
 
+<p align="center">
+  <img src="https://github.com/BioinfSina/GuidesAndDocs/blob/main/Pictures/expPlan.svg">
+</p>
+
 
 ## Where to start
 <a id="start"></a>
