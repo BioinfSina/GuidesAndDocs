@@ -59,7 +59,9 @@ Guidance on these matters is given by the Animal Welfare & Ethical Review Body (
 
 We usually have two different types of replicates, technical and biological replicates.
 
-![replicate_types](https://github.com/BioinfSina/GuidesAndDocs/blob/main/Pictures/replicate_types.svg)
+<p align="center">
+  <img src="https://github.com/BioinfSina/GuidesAndDocs/blob/main/Pictures/replicate_types.svg">
+</p>
 
 Technical replicates are achieved by either sequencing the exact same sample multiple times or by splitting a sample into multiple (sub)samples. Those samples will then be separately processed through the same pipeline. This is done to ensure reproducible results and a consistent process. If you plan to include them based on worries about inconsistencies in the process it might be beneficial to do a [pilot study](#pilot) to make sure the potential variability and any necessary additional training, equipment maintenance or adaptation of the main experiment has been identified.
 It is tempting to exclude technical replicates - which can be done for well-established protocols - but it is better to adapt analysis or repeat an experiment if the technical replicates showed issues, than to unknowingly publish irreproducible (and potentially wrong) results.
@@ -158,7 +160,9 @@ If possible you would restrict your treatment and control group to only subjects
 Randomisation is a way to reduce the impact of a known confounding factor. Individuals are randomly assigned to the treatment and control groups - which should lead to the confounding factors affecting both groups in the same way.
 
 <a id="block"></a>
-![blocking](https://github.com/BioinfSina/GuidesAndDocs/blob/main/Pictures/blocking.svg)
+<p align="center">
+  <img src="https://github.com/BioinfSina/GuidesAndDocs/blob/main/Pictures/blocking.svg">
+</p>
 
 A more direct method is blocking, where you allocate the same number of individuals affected by the same value of the confounding factor into all control and treatment groups, for example having age-matched controls or comparable numbers of male and female subjects to account for sex differences.
 
