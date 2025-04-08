@@ -29,7 +29,7 @@
 When designing an experiment, the first step is to define your [hypothesis](#hypothesis) or biological question. You can then identify the methods used to answer your question. These choices then lead to further choices about how the experiment might be designed.
 With a hypothesis in mind, you should already start talking to collaborators and facilities that might be involved in the process, so they can help you make sensible choices about methodology and experimental design. For non-standard experiments you might need a [pilot experiment](#pilot) to test and practice different processes and to design the experiment to best answer your question
 A successful pilot experiment helps you make informed decisions on necessary changes as well as deciding the [number](#rep_number) and [types](#rep_type) of replicates and [controls](#control_type) necessary for the main experiment. You can identify issues like [batch effects](#batch) and [confounding factors](#confounder) and need to adapt your design or analysis to appropriately deal with them. Once you are conducting your main experiment you will also need to collect appropriate [metadata](#metadata) to aid future analysis and reproducibility.
-In this guide, we will talk about each step of experiment planning. It is, however, a general guide and each experiment will be different. This is not a substitute for consulting with us and other facilities to ensure the best results.
+In this guide, we will talk about each step of experiment planning. It is, however, a general guide and each experiment will be different. This is not a substitute for consulting with us (<a href="mailto:bioinformatics@gurdon.cam.ac.uk">bioinformatics'at'gurdon.cam.ac.uk</a>) and other facilities to ensure the best results.
 
 
 <a id="hypothesis"></a>
@@ -256,12 +256,12 @@ Sequence each sample to a [depth](#seq_depth) of 25-30 million reads to enable d
 
 **Objective:** Evaluate the impact of a new medication on the methylation patterns in patients with lung cancer.
 
-####Design:
+#### Design:
 **Intervention Group:** Patients with lung cancer who receive the new medication
 **Standard Care Group**: Patients with lung cancer who receive the current standard of care
 **Control Group:** Healthy individuals
 
-### Challenges:
+#### Challenges:
 **Smoking as a Confounding Factor:**  
 Issue: Smokers are more prevalent in lung cancer patients than in the general population. If the control group has fewer smokers than the intervention groups, it could skew the results. Cancer is more likely to develop later in life.   
 Solution: Ensure all groups have a similar proportion of smokers to control for this variable and have the same age range.
@@ -282,6 +282,7 @@ AI can assist you with planing steps like the data analysis, but often gives ver
 ## Final remarks
 
 A lot of information on experiment design is based on a perfect world where your resources are unlimited and your choices only affected by optimal experiment design. We have aimed in this guide to give realistic and feasible advice. Realistically, there will be decisions made based on funding availability, time restrictions, practicality and availability of equipment and expert knowledge. In this case discussing with experts how to achieve the best design under given constraints is important.
+Contact us (<a href="mailto:bioinformatics@gurdon.cam.ac.uk">bioinformatics'at'gurdon.cam.ac.uk</a>) if you would like to discuss your experiment.
 
 ## References
 
