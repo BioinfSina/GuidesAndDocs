@@ -27,7 +27,6 @@
   <img src="https://github.com/BioinfSina/GuidesAndDocs/blob/main/Pictures/expPlan.svg">
 </p>
 
-
 ## Where to start
 <a id="start"></a>
 When designing an experiment, the first step is to define your [hypothesis](#hypothesis) or biological question. You can then identify the methods used to answer your question. These choices then lead to further choices about how the experiment might be designed.
