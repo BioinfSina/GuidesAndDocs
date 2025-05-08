@@ -1,5 +1,5 @@
-<h1 style="text-align: center;">Gurdon Bioinformatics Facility Guide to Experimental Design</h1>
-<p style="text-align: center;">
+<h1 align="center">Gurdon Bioinformatics Facility Guide to Experimental Design</h1>
+<p align="center">
   <i>Dr. Sina Beier</i>
 </p>
 
