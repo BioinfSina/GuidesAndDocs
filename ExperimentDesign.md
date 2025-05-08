@@ -35,9 +35,10 @@ This guide is written with biological - mostly high-throughput sequencing-based 
 19. [Final remarks](#final)
 20. [References](#ref)
 
-<p align="center">
-  <img src="https://github.com/BioinfSina/GuidesAndDocs/blob/main/Pictures/expPlan.svg">
-</p>
+<figure>
+<p align="center"><img src="https://github.com/BioinfSina/GuidesAndDocs/blob/main/Pictures/expPlan.svg" alt="Flow of experiment design"></p>
+<figcaption><p align="center"><i>Experiment design goes from an idea or hypothesis through an iterative process of improving an experiment design by including for example literature research, expert advice, creating preliminary experiment plans, conducting pilot experiments and getting ethical approval until finally converging into a plan for the final experiment.</i></p></figcaption></figure>
+
 
 ## Where to start
 <a id="start"></a>
@@ -71,9 +72,10 @@ Guidance on these matters is given by the Animal Welfare & Ethical Review Body (
 
 We usually have two different types of replicates, technical and biological replicates.
 
-<p align="center">
-  <img src="https://github.com/BioinfSina/GuidesAndDocs/blob/main/Pictures/replicate_types.svg">
-</p>
+<figure>
+<p align="center"><img src="https://github.com/BioinfSina/GuidesAndDocs/blob/main/Pictures/replicate_types.svg" alt="Biological and Technical Replicates in comparison"></p>
+<figcaption><p align="center"><i>Comparison of the design and process of handling biological and technical replicates in a high-throuput sequencing based experiment.</i></p></figcaption></figure>
+
 
 Technical replicates are achieved by either sequencing the exact same sample multiple times or by splitting a sample into multiple (sub)samples. Those samples will then be separately processed through the same pipeline. This is done to ensure reproducible results and a consistent process. If you plan to include them based on worries about inconsistencies in the process it might be beneficial to do a [pilot study](#pilot) to make sure the potential variability and any necessary additional training, equipment maintenance or adaptation of the main experiment has been identified.
 It is tempting to exclude technical replicates - which can be done for well-established protocols - but it is better to adapt analysis or repeat an experiment if the technical replicates showed issues, than to unknowingly publish irreproducible (and potentially wrong) results. For novel protocols or ones you have not personally conducted before it is always a good idea to include technical replicates as it can help to exclude or identify technical issues as a source of variation.
@@ -99,9 +101,10 @@ Statistical power usually requires a minimum of three replicates to ensure relia
 That's why you should never collect fewer than three biological replicates per condition. With three replicates, you have the chance to spot outliers and swapped samples - two samples agreeing on a measurement and one disagreeing would indicate that the third one is an outlier. The outlier could then either be excluded - leaving only two samples with no significant mean result possible or kept - strongly affecting a mean or median of the group.  It is still not possible to decide if a single outlier has biological significance or not, hence it is generally better to include more than three replicates.
 While in practice, three biological replicates is often sufficient to detect outliers and to find significant differences between your conditions, it is often not actually enough to find all the real differences (false negatives) and exclude erroneous results (false positives). But how many do we need?
 
-<p align="center">
-  <img src="https://github.com/BioinfSina/GuidesAndDocs/blob/main/Pictures/outliers.svg">
-</p>
+<figure>
+<p align="center"><img src="https://github.com/BioinfSina/GuidesAndDocs/blob/main/Pictures/outliers.svg" alt="Influence of outliers on your results"></p>
+<figcaption><p align="center"><i>Left: PCA plot of an experiment group with three samples, one of them an outlier. Right: Box plot of mean (horizontal line) and variance (grey box) of this group with the outlier included and removed from the calculation, showing the strong influence of a single outlier in small groups.</i></p></figcaption></figure>
+
 
 Schurch et al. (2016) [[2]](#2) discuss the necessary number of replicates to achieve good results in bulk RNASeq experiments. They see increases in true positives and decreases in false negatives until up to 40 replicates per group! Using appropriate analysis tools and fold change thresholds, they suggest 12 replicates per group are enough for high-quality results in bulk RNASeq.
 12 replicates sounds like a lot, but we strongly suggest including at least 6 replicates to generate useful results in most situations. You need to consider that potentially not all of your replicates will pass sequencing and pre-processing quality control and some could be outliers. Outliers can be caused by unexpected biological variation like a rare genetic variant, by contamination or experimental error. If they are singular occurrences it can be necessary to exclude them, however if there are multiple outliers in a group it might be better to look into finding the exact cause and considering them showing valid variations.
@@ -297,12 +300,12 @@ A larger control group might be necessary to take into account potentially havin
 <a id="ai"></a>
 ## Can’t I just use AI to plan my experiment?
 
-AI can assist you with planing steps like the data analysis, but often gives very generalised advice. While it is helpful to get started or find known issues with a design or workflow you are planning to use, it is no match for human professionals. If you struggle with experiment design, talk to your colleagues and friendly core facility staff before haggling with a large language model that might or might not give you advice appropriate for your specific needs. If you have used AI in planning please cross-check your results with human experts.
+AI can assist you with planing steps like the data analysis, but often gives very generalised advice. While it is helpful to get started or identify known issues with a design or workflow you are planning to use, it is no match for human professionals. If you struggle with experiment design, talk to your colleagues and friendly core facility staff before haggling with a large language model that might or might not give you advice appropriate for your specific needs. If you have used AI in planning please cross-check your results with human experts.
 
 <a id="final"></a>
 ## Final remarks
 
-A lot of information on experiment design is based on a perfect world where your resources are unlimited and your choices only affected by optimal experiment design. We have aimed in this guide to give realistic and feasible advice. Realistically, there will be decisions made based on funding availability, time restrictions, practicality and availability of equipment and expert knowledge. In this case discussing with experts how to achieve the best design under given constraints is important.
+A lot of information on experiment design is based on a perfect world where your resources are unlimited and your choices only affected by optimal experiment design. We have aimed in this guide to give realistic and feasible advice. Realistically, there will be decisions made based on funding availability, time restrictions, practicality and availability of equipment and expert knowledge. In those cases, discussing with experts how to achieve the best design under given constraints is especially important.
 Contact us (<a href="mailto:bioinformatics@gurdon.cam.ac.uk">bioinformatics'at'gurdon.cam.ac.uk</a>) if you would like to discuss your experiment.
 
 <a id="ref"></a>
