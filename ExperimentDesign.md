@@ -170,7 +170,7 @@ Randomisation is a way to reduce the impact of a known confounding factor. Indiv
 
 <a id="block"></a>
 <figure style="border: 3px solid #808080">
-<figcaption><h4 align="center">Comparison of male and female mice distributed to treatment and control groups with and without blocking for a batch effect caused by the sex of the mice.</h4></figcaption>
+<figcaption><p align="center"><i>Comparison of male and female mice distributed to treatment and control groups with and without blocking for a batch effect caused by the sex of the mice.</i></p></figcaption>
 <p align="center"><img src="https://github.com/BioinfSina/GuidesAndDocs/blob/main/Pictures/blocking.svg" alt="Comparison of a mouse experiment with and without blocking for sex differences."></p></figure>
 
 A more direct method is blocking, where you allocate the same number of individuals affected by the same value of the confounding factor into all control and treatment groups, for example having age-matched controls or comparable numbers of male and female subjects to account for sex differences.
