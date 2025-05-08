@@ -169,7 +169,7 @@ If possible you would restrict your treatment and control group to only subjects
 Randomisation is a way to reduce the impact of a known confounding factor. Individuals are randomly assigned to the treatment and control groups - which should lead to the confounding factors affecting both groups in the same way.
 
 <a id="block"></a>
-<figure style="border: 1px solid #000">
+<figure style="border: 3px solid #808080">
 <figcaption><h4 align="center">Comparison of male and female mice distributed to treatment and control groups with and without blocking for a batch effect caused by the sex of the mice.</h4></figcaption>
 <p align="center"><img src="https://github.com/BioinfSina/GuidesAndDocs/blob/main/Pictures/blocking.svg" alt="Comparison of a mouse experiment with and without blocking for sex differences."></p></figure>
 
