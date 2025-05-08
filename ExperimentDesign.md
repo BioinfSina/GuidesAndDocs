@@ -3,6 +3,10 @@
   <i>Dr. Sina Beier</i>
 </p>
 
+The aim of this guide is to help you design better experiments. Well-designed experiments lead to high-quality data analysis and robust, meaningful results.
+
+This guide is written with biological - mostly high-throughput sequencing-based - experiments in mind, but the general concepts do apply for many types of experiments. It should cover all major issues you would encounter during experiment design, but if you have further questions don't hesitate to let us know.
+
 ## Table of contents
 ### Before you begin
 1. [Where to start](#start)
