@@ -283,9 +283,9 @@ Sequence each sample to a [depth](#seq_depth) of 25-30 million reads to enable d
 **Objective:** Evaluate the impact of a new medication on the methylation patterns in patients with lung cancer.
 
 #### Design:
-**Intervention Group:** Patients with lung cancer who receive the new medication 
-**Standard Care Group:** Patients with lung cancer who receive the current standard of care 
-**Control Group:** Healthy individuals 
+**Intervention Group:** Patients with lung cancer who receive the new medication  
+**Standard Care Group:** Patients with lung cancer who receive the current standard of care  
+**Control Group:** Healthy individuals  
 
 #### Challenges:
 **Smoking as a Confounding Factor:**  
