@@ -195,12 +195,12 @@ Blocking and randomisation control for confounding variables, restriction avoids
 <a id="batch"></a>
 ## How to avoid and deal with batch effects
 
-Optimally, all samples in your experiment are treated in exactly the same way, by the same person under fixed conditions at the same time. It’s rarely like that in reality, which introduces batch effects. Batch effects are a subset of [confounding factors](#confounder) caused by technical factors like using multiple reagent batches or changing personnel.
+Optimally, all samples in your experiment are treated in exactly the same way, by the same person under fixed conditions at the same time. In reality, it's rarely like that, which introduces batch effects. Batch effects are a subset of [confounding factors](#confounder) caused by technical factors like using multiple reagent batches or changing personnel.
 Methods to avoid and deal with batch effects by adapting the experiment design are [randomisation](#random) and [blocking](#block).
 Some batch effects cannot be avoided. For example, if you are conducting a longitudinal study to investigate the progression of a disease over several years, collecting blood samples from patients at multiple time points: baseline, 1 year, 2 years, and 5 years. The technology and equipment used for sample processing and analysis evolve, leading to differences in the data generated at each time point. Even if you can keep the equipment the same, it will have been maintained multiple times throughout the experiment, and reagents will come from different batches, as they do not keep long enough. In this scenario, batch effects are introduced by the changes in technology, reagents, and equipment over the years and you cannot avoid the effect caused by these changes.
 Other batch effects can be mitigated by controlling how they affect the results through experiment design. Having to sequence samples over multiple runs could introduce a batch effect per run, but if you ensure running an equal number of samples from each experimental group on each run as well as including each treatment group in each run (blocking), this might still introduce a measurable batch effect for the runs, but it will not obscure your results when comparing the treatment groups. Alternatively, all samples could be sequenced at lower depths on each of the runs, resulting in multiple technical replicates per sample, which are merged for analysis.
 
-Batch effects that can not be avoided through those methods or were unknown until data analysis uncovered them can sometimes be algorithmically controlled or corrected during analysis  [[9]](#9). This usually requires the availability of unaffected controls or samples to correct for the batch effect. Methods not based on using information from unaffected samples as a baseline are available but can potentially introduce another bias or only change the bias from the batch effect to be less noticeable. They could obscure actual biological variation by overcorrection. Hence, if it is not possible to avoid or correct the batch effect during experiment design, it might be advisable to leave it in and discuss it using the appropriate metadata for reference, taking known biological effects into account.
+Batch effects that can not be avoided through those methods or were unknown until data analysis uncovered them can sometimes be algorithmically controlled or corrected for during analysis  [[9]](#9). This usually requires the availability of unaffected controls or samples to correct for the batch effect. Methods not based on using information from unaffected samples as a baseline are available but can potentially introduce another bias or only change the bias from the batch effect to be less noticeable. They could obscure actual biological variation by overcorrection. Hence, if it is not possible to avoid or correct the batch effect during experiment design, it might be advisable to leave it in and discuss it using the appropriate metadata for reference, taking known biological effects into account.
 
 Dealing with batch effects that couldn’t be avoided in the analysis is often done through specific toolkits, for example, Harmony [[10]](#10) (for scRNA-seq or spatial transcriptomics) and ComBat [[11]](#11) for bulk RNA-seq.
 
@@ -223,9 +223,9 @@ The quasi-experimental design relies either on carefully matched controls or cov
 Pilot experiments are small-scale studies conducted before the main experiment. They are crucial for refining and improving the design of your main study.
 A pilot experiment can be used to assess the feasibility of the experiment, test and practice the procedures, and generate example data for analysis. They help determine the amount of expected variation and thus ensure the number and type of replicates and controls collected are appropriate. They can be used to determine what is an appropriate sequencing depth and to determine the number of cells you need to collect for a scRNA-seq experiment so you can analyse a rare cell population.
  
-Conducting pilot experiments can save you money in the long run by optimising the experiment design and ensuring you have the right training and analysis tools available before starting a larger experiment. This way, you maximise the outcomes of the main experiment without risking a loss of time and resources.
+While having a preliminary experiment seems not cost or time effective, conducting pilot experiments can save you time and money in the long run by optimising the experiment design and ensuring you have the right training and analysis tools available before starting a larger experiment. This way, you maximise the outcomes of the main experiment without risking a loss of time and resources.
 
-The design of a pilot experiment involves reducing your number of samples to a ‘minimal example’. However, for a single-cell RNA-seq experiment, you might aim to sequence a large number of cells at high depth, to determine the optimal number of cells and [sequencing depth](#seq_depth) on the full set of samples in the main experiment.
+The general way to design a pilot experiment involves reducing your number of samples to a ‘minimal example’. However, for a single-cell RNA-seq experiment, you might aim to sequence a large number of cells at high depth, to determine the optimal number of cells and [sequencing depth](#seq_depth) on the full set of samples in the main experiment.
 
 
 <a id="bias"></a>
@@ -252,7 +252,7 @@ Types and examples of metadata include sample-associated metadata (sampling time
 
 ### Bulk RNASeq mouse experiment
 
-**Objective:** Investigate the effect of a new injected drug on gene expression in mice
+**Objective:** Investigate the effect of a new injectable drug on gene expression in mice
 
 #### Design
 **Treatment Group:** Mice injected with the drug  
@@ -260,7 +260,7 @@ Types and examples of metadata include sample-associated metadata (sampling time
 **Negative Control:** Healthy mice not injected with either   
 
 #### Challenges	
-**Known [Batch Effect](#batch):** Experiment needs two days of RNA extraction and multiple sequencing runs
+**Known [Batch Effect](#batch):** Experiment requires two days of RNA extraction and multiple sequencing runs
 
 **[Confounding Factor](#confounder):** Age of the mice
 
@@ -277,7 +277,7 @@ Sequence each sample to a [depth](#seq_depth) of 25-30 million reads to enable d
 
 #### Issues to avoid (bad design):
 
-* Lack of Randomisation: Selecting stronger mice for the treatment group
+* Lack of Randomisation: Selecting mice perceived as stronger or healthier for the treatment group
 * No Replication: Use only two mice per group, making the results unreliable and statistically invalid for analysis
 * Ignoring Batch Effects: Each group has RNA extraction on a separate day and is sequenced on a separate run
 * No Blinding: Staff know the group assignments, potentially causing biased behaviour.
@@ -301,19 +301,19 @@ Solution: Ensure all groups have a similar proportion of smokers to control for 
 Issue: Smokers in the control group might have pre-cancerous lesions or undiagnosed lung cancer  
 Solution: Detailed health checks for the control group to remove individuals at risk
 
-A larger control group might be necessary to take into account potentially having to remove participants from the control if they develop lung cancer, keeping enough participants for statistically relevant results.
+A larger control group is necessary to take into account potentially having to remove participants from the control if they develop lung cancer, keeping enough participants for statistically relevant results.
 [Sequencing depth](#seq_depth) is highly dependent on your financial constraints, as sequencing required for methylation analysis tends to be more expensive. It could be advisable to do targeted sequencing of selected regions of interest.
 
 <a id="ai"></a>
 ## Can’t I just use AI to plan my experiment?
 
-AI can assist you with planning steps like data analysis but often gives very generalised advice. While it is helpful to get started or identify known issues with a design or workflow you are planning to use, it is no match for human professionals. If you struggle with experiment design, talk to your colleagues and friendly core facility staff before haggling with a large language model that might or might not give you advice appropriate for your specific needs. If you have used AI in planning please cross-check your results with human experts.
+AI can assist you with planning steps like workflows for data analysis but often gives very generalised advice. While it is helpful to get started or identify known issues with a design or workflow you are planning to use, it is no match for human professionals. If you struggle with experiment design, talk to your colleagues and friendly core facility staff before haggling with a large language model that might or might not give you advice appropriate for your specific needs. If you have used AI in planning please cross-check your results with human experts to avoid disappointment.
 
 <a id="final"></a>
 ## Final remarks
 
-A lot of information on experiment design is based on a perfect world where your resources are unlimited and your choices only affected by optimal experiment design. We have aimed in this guide to give realistic and feasible advice. Realistically, there will be decisions made based on funding availability, time restrictions, practicality and availability of equipment and expert knowledge. In those cases, discussing with experts how to achieve the best design under given constraints is especially important.
-Contact us (<a href="mailto:bioinformatics@gurdon.cam.ac.uk">bioinformatics'at'gurdon.cam.ac.uk</a>) if you would like to discuss your experiment.
+A lot of information on experiment design is based on a perfect world where your resources are unlimited and your choices only affected by your aim to optimise the experiment. We have aimed in this guide to give realistic and feasible advice. Realistically, there will be decisions made based on funding availability, time restrictions, practicality and availability of equipment and expert knowledge. In those cases, discussing with experts how to achieve the best design under given constraints is especially important.
+Contact us (<a href="mailto:bioinformatics@gurdon.cam.ac.uk">bioinformatics'at'gurdon.cam.ac.uk</a>) if you would like to discuss your experiment at any stage of the process - the earlier, the better.
 
 <a id="ref"></a>
 ## References
